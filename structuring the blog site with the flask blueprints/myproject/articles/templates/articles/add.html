@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block title %} Add Article{% endblock %}
+
+{% block content %}
+
+<div class="container p-5 mt-4 d-flex flex-column justify-content-center align-items-center">
+    <h3>Fill the below form to post a new article</h3>
+    <div class="container d-flex flex-column  align-items-center border border-black rounded p-5 mt-3">
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.name.label }} {{ form.name(class="my-3") }}<br>
+            {{ form.article_title.label }} {{ form.article_title(class="my-3") }}<br>
+            {{ form.article_content.label }} {{ form.article_content(class="my-3 w-100") }}<br>
+            {{ form.submit(class="my-3 btn btn-outline-primary") }}
+        </form>
+    </div>
+</div>
+
+{% endblock %}
+
+
+

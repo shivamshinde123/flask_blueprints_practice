@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %} Delete Article{% endblock %}
+
+{% block content %}
+
+<div class="container p-5 mt-4 d-flex flex-column justify-content-center align-items-center">
+    <h3>Fill the below form to delete an existing article</h3>
+    <div class="container d-flex flex-column  align-items-center border border-black rounded p-5 mt-3">
+        <form method="POST">
+            {{ form.hidden_tag() }}
+            {{ form.article_title.label }} {{ form.article_title(class="my-3") }}<br>
+            {{ form.submit(class="my-3 btn btn-outline-primary") }}
+        </form>
+    </div>
+</div>
+
+{% endblock %}

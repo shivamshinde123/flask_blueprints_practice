@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block title %}List Puppies{% endblock %}
+
+{% block content %}
+
+<div class="container p-5 mt-5 border border-dark rounded">
+    <h1>Here is a list of all available puppies:</h1>
+    <ul>
+        {% for pup in puppies %}
+               {% if pup.owner.name %}
+               <li>The puppy named {{ pup.name }} (unique id: {{ pup.id }}) has the owner named {{ pup.owner.name }} (unique id: {{ pup.owner.id }}).</li>
+               {% else %}
+               <li>The puppy named {{ pup.name }} (unique id: {{ pup.id }}) is yet to be adopted.</li>
+               {% endif %}
+        {% endfor %}
+    </ul>
+</div>
+
+
+
+{% endblock %}
+
+
+

@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Add Puppies{% endblock %}
+
+
+
+{% block content %}
+
+<div class="container p-5 mt-5 border border-dark">
+    <h1 class="my-3">Have a puppy that needs to be adopted</h1>
+    <p>Add a new puppy to our database!</p>
+    <form method="POST">
+        {{ form.hidden_tag() }}
+        {{ form.name.label }} {{ form.name(class="m-3") }}<br>
+        {{ form.submit(class="my-3 btn btn-outline-warning") }}
+    </form>
+</div>
+
+
+
+{% endblock %}
